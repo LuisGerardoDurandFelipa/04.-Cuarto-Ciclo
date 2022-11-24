@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.idat.edu.pe.daa.modulo.Campo;
-import com.idat.edu.pe.daa.modulo.Cliente;
+
 import com.idat.edu.pe.daa.servicio.CampoServicioImp;
-import com.idat.edu.pe.daa.servicio.ClienteServicioImp;
 
 @Controller
 

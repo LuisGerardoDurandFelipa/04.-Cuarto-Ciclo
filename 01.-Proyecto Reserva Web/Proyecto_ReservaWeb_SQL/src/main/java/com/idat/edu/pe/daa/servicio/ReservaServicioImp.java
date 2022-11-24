@@ -36,12 +36,10 @@ public class ReservaServicioImp {
 	public Reserva actualizar(Reserva reservaActualizar) {
 		Reserva reservaActual = reservaRepositorio.findById(reservaActualizar.getId_Reserva()).get();
 
-		reservaActual.setFecha(reservaActual.getFecha());
-		reservaActual.setHora(reservaActual.getHora());
-		reservaActual.setHorasReservadas(reservaActual.getHorasReservadas());
-		reservaActual.setEstado_Reserva(reservaActual.getEstado_Reserva());
-	
-	
+		reservaActual.setFecha(reservaActualizar.getFecha());
+		reservaActual.setHora(reservaActualizar.getHora());
+		reservaActual.setHorasReservadas(reservaActualizar.getHorasReservadas());
+		reservaActual.setEstado_Reserva(reservaActualizar.getEstado_Reserva());
 
 		Reserva reservaActualizado = reservaRepositorio.save(reservaActual);
 		return reservaActualizado;

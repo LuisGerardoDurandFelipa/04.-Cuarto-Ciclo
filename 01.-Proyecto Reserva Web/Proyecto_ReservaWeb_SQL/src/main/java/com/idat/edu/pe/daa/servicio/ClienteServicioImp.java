@@ -43,12 +43,11 @@ public class ClienteServicioImp  {
 	public Cliente actualizar(Cliente clienteActualizar) {
 		Cliente clienteActual = clienteRepositorio.findById(clienteActualizar.getId_Cliente()).get();
 
-		clienteActual.setNombre(clienteActual.getNombre());
-		clienteActual.setApellido(clienteActual.getApellido());
-		clienteActual.setDni(clienteActual.getDni());
-		clienteActual.setTelefono(clienteActual.getTelefono());
-		clienteActual.setCorreo(clienteActual.getCorreo());
-	
+		clienteActual.setNombre(clienteActualizar.getNombre());
+		clienteActual.setApellido(clienteActualizar.getApellido());
+		clienteActual.setDni(clienteActualizar.getDni());
+		clienteActual.setTelefono(clienteActualizar.getTelefono());
+		clienteActual.setCorreo(clienteActualizar.getCorreo());
 
 		Cliente clienteActualizado = clienteRepositorio.save(clienteActual);
 		return clienteActualizado;
@@ -66,6 +65,19 @@ public class ClienteServicioImp  {
 		
 	}
 
+	public void  actualizar(Long id ,Cliente clienteActualizar) {
+		Cliente clienteActual = clienteRepositorio.findById(clienteActualizar.getId_Cliente()).get();
+
+		clienteActual.setNombre(clienteActualizar.getNombre());
+		clienteActual.setApellido(clienteActualizar.getApellido());
+		clienteActual.setDni(clienteActualizar.getDni());
+		clienteActual.setTelefono(clienteActualizar.getTelefono());
+		clienteActual.setCorreo(clienteActualizar.getCorreo());
+	
+        clienteRepositorio.save(clienteActual);
+		
+	}
+	
 	
 	
 

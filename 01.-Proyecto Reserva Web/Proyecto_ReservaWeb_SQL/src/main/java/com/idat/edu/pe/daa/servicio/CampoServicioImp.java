@@ -37,12 +37,10 @@ public class CampoServicioImp {
 	public Campo actualizar(Campo campoActualizar) {
 		Campo campoActual = campoRepositorio.findById(campoActualizar.getId_Campo()).get();
 
-		campoActual.setCodigoCampo(campoActual.getCodigoCampo());
-		campoActual.setNombreCampo(campoActual.getNombreCampo());
-		campoActual.setEstado(campoActual.getEstado());
-		campoActual.setTipoCampo(campoActual.getTipoCampo());
-	
-	
+		campoActual.setCodigoCampo(campoActualizar.getCodigoCampo());
+		campoActual.setNombreCampo(campoActualizar.getNombreCampo());
+		campoActual.setEstado(campoActualizar.getEstado());
+		campoActual.setTipoCampo(campoActualizar.getTipoCampo());
 
 		Campo campoActualizado = campoRepositorio.save(campoActual);
 		return campoActualizado;
@@ -59,6 +57,20 @@ public class CampoServicioImp {
 	public void borrarPorId(Long id_Campo) {
 		campoRepositorio.deleteById(id_Campo);
 		
+	}
+	
+	
+
+	public void actualizar(Long id,Campo campoActualizar) {
+		Campo campoActual = campoRepositorio.findById(campoActualizar.getId_Campo()).get();
+
+		campoActual.setCodigoCampo(campoActualizar.getCodigoCampo());
+		campoActual.setNombreCampo(campoActualizar.getNombreCampo());
+		campoActual.setEstado(campoActualizar.getEstado());
+		campoActual.setTipoCampo(campoActualizar.getTipoCampo());
+
+		 campoRepositorio.save(campoActual);
+	
 	}
 
 	

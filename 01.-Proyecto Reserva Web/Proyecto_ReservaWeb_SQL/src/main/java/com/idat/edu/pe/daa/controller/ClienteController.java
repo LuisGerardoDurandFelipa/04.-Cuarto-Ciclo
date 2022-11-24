@@ -77,7 +77,7 @@ public class ClienteController {
 	
 
 	@RequestMapping(value ="/eliminar/{id}")
-	public String eliminarSede(@PathVariable(name = "id") long id) {
+	public String eliminarCliente(@PathVariable(name = "id") long id) {
 		clienteServicioImp.borrarPorId(id);
 		 return "redirect:/clientes/listarTodo";
 		
