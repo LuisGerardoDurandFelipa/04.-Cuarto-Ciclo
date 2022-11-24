@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../css/miLogin.css" rel="stylesheet" type="text/css" />
+<link href="../css/miLayout.css" rel="stylesheet" type="text/css" />
+<link href="../css/font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+<title>Crear Nueva Reserva</title>
+</head>
+<body>
+
+
+	<header th:replace="layout/barraMenu :: header"></header>
+
+
+	<section id="seccion1">
+		<p>Datos de Nueva Reserva</p>
+		<form th:action="@{/reservas/guardar}" th:object="${reserva}"
+			method="post">
+
+			<div class="form-group row">
+				<label for="fecha" class="col-sm-2 col-form-label">Fecha de
+					Reserva:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="fecha"
+						placeholder="Fecha de Reserva" th:field="*{fecha}" />
+				</div>
+			</div>
+
+
+
+			<div class="form-group row">
+				<label for="hora" class="col-sm-2 col-form-label">Hora :</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="hora"
+						placeholder="Ingrese Hora" th:field="*{hora}" />
+				</div>
+			</div>
+
+
+			<div class="form-group row">
+				<label for="horasReservadas" class="col-sm-2 col-form-label">Horas
+					Reservadas :</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="horasReservadas"
+						placeholder="Horas Reservadas" th:field="*{horasReservadas}" />
+				</div>
+			</div>
+
+
+
+			<div class="form-group row">
+				<label for="estado_Reserva" class="col-sm-2 col-form-label">Estado
+					de Reserva :</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="estado_Reserva"
+						placeholder="Estado de Reserva" th:field="*{estado_Reserva}" />
+				</div>
+			</div>
+
+
+
+			<div class="form-group row">
+				<label for="cliente" class="col-sm-2 col-form-label">Cliente
+					:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="cliente"
+						placeholder="Cliente" th:field="*{cliente}" />
+				</div>
+			</div>
+			 	
+					<div class="form-group row">
+					<label for="campo" class="col-sm-2 col-form-label">Campo :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="campo"
+							placeholder="Campo" th:field="*{campo}" />
+					</div>
+				    </div>
+
+
+
+
+
+			<div align="center">
+				<button type="submit" class="btn btn-primary">Guardar</button>
+			</div>
+
+
+		</form>
+	</section>
+</html>
