@@ -1,0 +1,686 @@
+{
+	"info": {
+		"_postman_id": "02d412a2-79c6-4350-ae08-d3574d9d6491",
+		"name": "EC3-RESERVA WEB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11121851"
+	},
+	"item": [
+		{
+			"name": "01.-Tabla Cliente",
+			"item": [
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Clintes Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nuevo Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n    \"nombre\": \"xd xd\",\r\n    \"apellido\": \"sede\",\r\n    \"dni\": \"70312562\",\r\n    \"telefono\": \"993686916\",\r\n    \"correo\": \"durand.felipa.luis.gerardo@gmail.co\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n   \"id_Cliente\": 2,\r\n    \"nombre\": \"xd xd\",\r\n    \"apellido\": \"dede\",\r\n    \"dni\": \"70312562\",\r\n    \"telefono\": \"993686916\",\r\n    \"correo\": \"durand.felipa.luis.gerardo@gmail.co\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/clientes/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02.-Tabla Campo",
+			"item": [
+				{
+					"name": "Listar Campos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/campos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"campos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Campos Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/campos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"campos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nuevo Campos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n        \"id_Campo\": 3,\r\n        \"codigoCampo\": \"C0002\",\r\n        \"nombreCampo\": \"los azules 2\",\r\n        \"estado\": \"operativo\",\r\n        \"tipoCampo\": \"loza\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/campos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"campos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Campos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n        \"id_Campo\": 3,\r\n        \"codigoCampo\": \"C0002\",\r\n        \"nombreCampo\": \"los verdes 2\",\r\n        \"estado\": \"operativo\",\r\n        \"tipoCampo\": \"loza\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/campos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"campos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Campos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/campos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"campos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "03.-Tabla Reserva",
+			"item": [
+				{
+					"name": "Listar Reservas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/reservas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Reservas Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/reservas/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"reservas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nueva Reserva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Reserva\": 9,\r\n    \"fecha\": \"17/20/2022          \",\r\n    \"hora\": \"15:60               \",\r\n    \"horasReservadas\": \"2                   \",\r\n    \"estado_Reserva\": \"por pagar           \",\r\n    \"cliente\": {\r\n        \"id_Cliente\": 2,\r\n        \"nombre\": \"xd xd\",\r\n        \"apellido\": \"dede\",\r\n        \"dni\": \"70312562\",\r\n        \"telefono\": \"993686916\",\r\n        \"correo\": \"durand.felipa.luis.gerardo@gmail.co\"\r\n    },\r\n    \"campo\": {\r\n        \"id_Campo\": 1,\r\n        \"codigoCampo\": \"C0001\",\r\n        \"nombreCampo\": \"los verdes 2\",\r\n        \"estado\": \"operativ\",\r\n        \"tipoCampo\": \"grazz\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/reservas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Reserva",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Reserva\": 9,\r\n    \"fecha\": \"17/20/2022          \",\r\n    \"hora\": \"15:60               \",\r\n    \"horasReservadas\": \"2                   \",\r\n    \"estado_Reserva\": \"pagado           \",\r\n    \"cliente\": {\r\n        \"id_Cliente\": 2,\r\n        \"nombre\": \"xd xd\",\r\n        \"apellido\": \"dede\",\r\n        \"dni\": \"70312562\",\r\n        \"telefono\": \"993686916\",\r\n        \"correo\": \"durand.felipa.luis.gerardo@gmail.co\"\r\n    },\r\n    \"campo\": {\r\n        \"id_Campo\": 1,\r\n        \"codigoCampo\": \"C0001\",\r\n        \"nombreCampo\": \"los verdes 2\",\r\n        \"estado\": \"operativ\",\r\n        \"tipoCampo\": \"grazz\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/reservas/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"reservas",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Reserva",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/reservas/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"reservas",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "04.-Tabla Promociones",
+			"item": [
+				{
+					"name": "Listar Promociones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/promociones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"promociones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Promociones Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/promociones/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"promociones",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nueva Promocion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Promocion\": 7,\r\n    \"nombre_promocion\": \"Torneo elampago\",\r\n    \"descripcion_promocion\": \"Los Clientes Con Mas Asistencias Tendran  Mejores Descuentos\",\r\n    \"fecha_promo_inicio\": \"23/11/2023\",\r\n    \"fecha_promo_final\": \"25/11/2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/promociones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"promociones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Promocion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Promocion\": 7,\r\n    \"nombre_promocion\": \"Torneo \",\r\n    \"descripcion_promocion\": \"Los Clientes Con Mas Asistencias Tendran  Mejores Descuentos\",\r\n    \"fecha_promo_inicio\": \"23/11/1525\",\r\n    \"fecha_promo_final\": \"25/11/2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/promociones/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"promociones",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Promocion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/promociones/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"promociones",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "05.-Tabla Academia",
+			"item": [
+				{
+					"name": "Listar Academia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/academias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"academias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Academia Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/rest/academias/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"academias",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Nueva Academia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Registro\": 3,\r\n    \"nombre_tutor\": \"luis gerardo\",\r\n    \"apellido_tutor\": \"felipa\",\r\n    \"dni_tutor\": \"70312562\",\r\n    \"telefono_tutor\": \"25252525\",\r\n    \"email_tutor\": \"durand.felipa.luis.gerardo@gmail.com\",\r\n    \"fechanac_estudiante\": \"27/18/2022\",\r\n    \"nombre_estudiante\": \"Daniel David\",\r\n    \"apellido_estudiante\": \"Durand Felipa\",\r\n    \"dni_estudiante\": \"70312562\",\r\n    \"deporte\": \"salto alto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/academias/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"academias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Academia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Registro\": 3,\r\n    \"nombre_tutor\": \"luis gerardo\",\r\n    \"apellido_tutor\": \"felipa\",\r\n    \"dni_tutor\": \"70312562\",\r\n    \"telefono_tutor\": \"25252525\",\r\n    \"email_tutor\": \"durand.felipa.luis.gerardo@gmail.com\",\r\n    \"fechanac_estudiante\": \"27/18/2022\",\r\n    \"nombre_estudiante\": \"Daniel David\",\r\n    \"apellido_estudiante\": \"Durand Felipa\",\r\n    \"dni_estudiante\": \"70312562\",\r\n    \"deporte\": \"salto corto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/academias/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"academias",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Academia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/rest/academias/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"rest",
+								"academias",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

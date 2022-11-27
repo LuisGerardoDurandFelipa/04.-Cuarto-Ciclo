@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/miLogin.css" rel="stylesheet" type="text/css" />
+<link href="../../css/miLayout.css" rel="stylesheet" type="text/css" />
+<link href="../../css/font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<title>Actulizar Nueva Cliente</title>
+</head>
+<body>
+
+
+		<header th:replace="layout/barraMenu :: header"></header>
+		
+
+	<section id="seccion1">
+			<p>Datos Nuevos Clientes</p>
+			<form th:action="@{/clientes/guardar}"
+				th:object="${cliente}" method="post">
+
+				<div class="form-group row">
+					<label for="id_Cliente" class="col-sm-2 col-form-label">ID CLIENTE :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="id_Cliente"
+							 th:field="*{id_Cliente}" readonly="readonly" />
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-form-label">Nombre :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="nombre"
+							placeholder="Nombre" th:field="*{nombre}" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="apellido" class="col-sm-2 col-form-label">Apellido :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="apellido"
+							placeholder="Apellido" th:field="*{apellido}" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="dni" class="col-sm-2 col-form-label">Dni :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="dni"
+							placeholder="Dni" th:field="*{dni}" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="telefono" class="col-sm-2 col-form-label">Telefono :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="telefono"
+							placeholder="Telefono" th:field="*{telefono}" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="correo" class="col-sm-2 col-form-label">Correo :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="correo"
+							placeholder="Correo" th:field="*{correo}" />
+					</div>
+				</div>
+
+				
+				<div align="center">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+
+
+			</form>
+	</section>
+
+
+	
+</html>

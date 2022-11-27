@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/miLogin.css" rel="stylesheet" type="text/css" />
+<link href="../../css/miLayout.css" rel="stylesheet" type="text/css" />
+<link href="../../css/font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<title>ACTUALIZAR NUEVAS PROMOCIONES</title>
+</head>
+<body>
+
+
+		<header th:replace="layout/barraMenu :: header"></header>
+		
+
+	<section id="seccion1">
+			<p>DATOS NUEVAS PROMOCIONES</p>
+			<form th:action="@{/promociones/guardar}"
+				th:object="${promociones}" method="post">
+
+				<div class="form-group row">
+					<label for="id_Promocion" class="col-sm-2 col-form-label">ID PROMOCIONES :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="id_Promocion"
+							 th:field="*{id_Promocion}" readonly="readonly" />
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label for="nombre_promocion" class="col-sm-2 col-form-label">NOMBRE PROMOCIONES :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="nombre_promocion"
+							placeholder="nombre Promociones" th:field="*{nombre_promocion}" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="descripcion_promocion" class="col-sm-2 col-form-label">DESCRIPCION PROMOCIONES :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="descripcion_promocion"
+							placeholder="descripcion Promociones" th:field="*{descripcion_promocion}" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="fecha_promo_inicio" class="col-sm-2 col-form-label">FECHA PROMO INICIAL :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="fecha_promo_inicio"
+							placeholder="FechaPromoInicial" th:field="*{fecha_promo_inicio}" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="fecha_promo_final" class="col-sm-2 col-form-label">FECHA PROMO FINAL :</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="fecha_promo_final"
+							placeholder="FechaPromoFinal" th:field="*{fecha_promo_final}" />
+					</div>
+				</div>
+				
+
+				
+				<div align="center">
+					<button type="submit" class="btn btn-primary">GUARDAR</button>
+				</div>
+
+
+			</form>
+	</section>
+
+
+	
+</html>

@@ -52,11 +52,12 @@
 <body>
 
 	<header th:replace="layout/barraMenu :: header"></header>
-		
-		
+
+
 
 	<section id="seccion1">
 		<div>
+			
 			<div align="center">
 				<a th:href="@{/clientes/nuevo}">Crear Nueva Cliente</a>
 			</div>
@@ -71,9 +72,9 @@
 						<th>Dni</th>
 						<th>Telefono</th>
 						<th>Correo</th>
-					
-						
-					
+
+
+
 					</tr>
 				</thead>
 				<tbody>
@@ -84,22 +85,15 @@
 						<td th:text="${cliente.dni}">Dni</td>
 						<td th:text="${cliente.telefono}">Telefono</td>
 						<td th:text="${cliente.correo}">Correo</td>
-				<td>
-				<a
+						<td><a
 							th:href="@{/clientes/actualizar/{id}(id=${cliente.id_Cliente})}"><img
 								src="../imagenes/actualizarIcon.png" class="img-fluid"
 								data-toggle="tooltip" data-placement="bottom"
-								title="Actualizar Cliente"></a> 
-								
-								&nbsp;&nbsp;&nbsp;
-							
-								 <a
+								title="Actualizar Cliente"></a> &nbsp;&nbsp;&nbsp; <a
 							th:href="@{/clientes/eliminar/{id}(id=${cliente.id_Cliente})}"><img
 								src="../imagenes/eliminarIcon.png" class="img-fluid"
 								data-toggle="tooltip" data-placement="bottom"
-								title="Eliminar Cliente"></a>
-								
-						</td>
+								title="Eliminar Cliente"></a></td>
 					</tr>
 				</tbody>
 			</table>

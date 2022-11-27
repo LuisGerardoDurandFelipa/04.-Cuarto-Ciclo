@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../css/responsive.bootstrap4.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet"
+	type="text/css" />
+<title>Barra Principal</title>
+<link href="../css/miLogin.css" rel="stylesheet" type="text/css" />
+<link href="../css/miLayout.css" rel="stylesheet" type="text/css" />
+<link href="../css/font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+<link href="../css/datatables.min.css" rel="stylesheet" type="text/css" />
+<script src="../js/datatables.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<header th:fragment="header">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="login"  class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+      </symbol>
+</svg>
+
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark flex-row">
+			<a class="navbar-brand mr-auto" href="/"> <img
+				src="../imagenes/CanchasPeru.png" class="img-fluid"
+				alt="Responsive image" height="100" width="100">
+			</a>
+			<div class="container">
+				<h1 style="color: white;">CANCHAS PERU</h1>
+			</div>
+
+			<ul class="navbar-nav flex-row mr-lg-0">
+				<li class="nav-item"><a class="nav-link pr-2"></a></li>
+				<li class="nav-item"><a class="nav-link pr-2"></a></li>
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 <span class="caret"> <svg class="bi d-block mx-auto mb-2" width="24" height="24"> <use xlink:href="#login" /></span> </a>
+					 
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"> 
+						<a class="dropdown-item" th:href="@{/verPerfil}">Perfil</a> 
+						<a class="dropdown-item" th:href="@{/logout}">Salir</a>
+					</div>
+				</li>
+			</ul>
+			<button class="navbar-toggler ml-lg-0" type="button"
+				data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" id="nav-link-custom"
+						th:href="@{/bienvenida}">IDAT</a></li>
+
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/home/home}">HOME</a></li>
+
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle mr-3 mr-lg-0"
+						id="navbarDropdownMenuLink" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false"> <span
+							class="caret">MANTENIMIENTO</span>
+					</a>
+						<div class="dropdown-menu dropdown-menu-right"
+							aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" th:href="@{/clientes/listarTodo}">Cliente</a>
+							<a class="dropdown-item" th:href="@{/reservas/listarTodo}">Reserva</a>
+							<a class="dropdown-item" th:href="@{/campos/listarTodo}">Campo</a>
+							<a class="dropdown-item" th:href="@{/promociones/listarTodo}">Promociones</a>
+							<a class="dropdown-item" th:href="@{/academias/listarTodo}">Academias</a>
+						</div></li>
+
+
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text"
+						placeholder="Buscar">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				</form>
+			</div>
+		</nav>
+
+
+		<footer class="mt-auto fixed-bottom p-3">
+			<small>Copyright &copy; www.idat.edu.pe</small>
+		</footer>
+
+	</header>
+</body>
+</html>
