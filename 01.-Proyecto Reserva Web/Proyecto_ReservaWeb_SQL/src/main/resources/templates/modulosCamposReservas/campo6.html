@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author"
+	content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+<meta name="generator" content="Hugo 0.104.2" />
+
+
+<!-- *************************************************************************** -->
+<!--  LIBRERIAS DE BOOTSTRAP -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../css/responsive.bootstrap4.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet"
+	type="text/css" />
+<title>CAMPO 6</title>
+<link href="../css/miLogin.css" rel="stylesheet" type="text/css" />
+<link href="../css/miLayout.css" rel="stylesheet" type="text/css" />
+<link href="../css/font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+<link href="../css/datatables.min.css" rel="stylesheet" type="text/css" />
+<script src="../js/datatables.min.js" type="text/javascript"></script>
+
+<link rel="canonical"
+	href="https://getbootstrap.com/docs/5.2/examples/album/" />
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/mifunciones.js" type="text/javascript"></script>
+
+
+
+<script>
+	$(function() {
+		$("#datepicker").datepicker({
+			minDate : 1,
+			maxDate : " +10D"
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+	<!-- *************************************************************************** -->
+	<!--  ****************** BARRA DE MENU RAPIDO *********************-->
+
+	<header th:replace="layout/barraMenu :: header"></header>
+
+	<!-- ************** FIN DE LA BARRA RAPIDA*********************** -->
+
+	<!-- ********************************************************************************-->
+
+	<!-- ********************** CATALAGO DE CANCHAS *****************************************-->
+	<main>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+				<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+					<h1 class="p-2 bg-success text-white">Cancha Deportiva 6</h1>
+
+
+					<span class="image main"><img
+						src="../IMAGENES_DE_CANCHAS/02.-CAMPO2/CAMPO2_1.png"
+						style="border: 5px solid; color: black;" width="800" height="350" />
+					</span>
+				</div>
+
+
+
+
+
+
+
+				<div class="row g-0 text-">
+					<div class="col-sm-6 col-md-8">
+						<div class="inner">
+							<div class="container">
+								<h2 class="p-2 bg-success text-white">Informacion</h2>
+								<ul>
+									<li>
+										<h5>Descripción:</h5>
+										<p>Canchas de Futbol para 10 Personas.</p>
+									</li>
+									<li>
+										<h5>Incluye:</h5>
+										<p>Chalecos, 2 Balones</p>
+									</li>
+									<li>
+										<h5>Tribuna:</h5>
+										<p>Para 50 personas.</p>
+									</li>
+									<li>
+										<h5>Estacionamiento Interno:</h5>
+										<p>Para 100 vehículos con vigilancia 24 Hr.</p>
+									</li>
+									<li>
+										<h5>Servicios higiénicos:</h5>
+										<p>Damas y Caballeros.</p>
+									</li>
+									<li>
+										<h5>Precio:</h5>
+										<p>S./ 200 soles</p>
+									</li>
+								</ul>
+							</div>
+							<br>
+							<div class="container">
+								<h2 class="p-2 bg-success text-white">Términos y
+									condiciones:</h2>
+								<ul>
+									<li>Para reservar su cancha debe seleccionar el horario
+										disponible (verde) e ingresar sus datos.</li>
+									<li>Para confirmar su reserva debe realizar el depósito
+										bancario en un plazo máximo de 12 horas.</li>
+								</ul>
+							</div>
+							<br>
+							<div class="container">
+
+								<h2 class="p-2 bg-success text-white">Fromas de Pago</h2>
+								<ul>
+									<li>Cuenta de Ahorros BCP: 192-25412305-0-94 a nombre de
+										CANCHASPERU.COM E.I.RL.</li>
+									<li>Monto: Debe abonar el 50% del total de la hora, el 50%
+										restante lo cancelará en la cancha el día del partido.</li>
+									<li>Por favor confirmar su depósito vía email a
+										central@canchasperu.com para la confirmación.</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
+
+
+					<div class="col-6 col-md-4">
+						<div class="container">
+							<form th:action="@{/home/guardar}" th:object="${reserva}"
+								method="post">
+
+								<div class="form-group row">
+									<label for="fecha" class="col-sm-6 col-form-label">Fecha
+										de Reserva:</label>
+									<div class="col-sm-10">
+										<input type="text" id="datepicker" th:field="*{fecha}"
+											required>
+									</div>
+								</div>
+								<div>
+
+									<label for="hora" class="form-label">INICIO DE LA
+										RESERVAR</label> <input type="time" class="form-control" id="hora"
+										th:field="*{hora}" required> <br>
+								</div>
+								<div>
+
+									<label for="horasReservadas" class="form-label">HORAS A
+										RESERVAR :</label> <input type="text" class="form-control"
+										id="horasReservadas" placeholder="Horas Reservadas"
+										th:field="*{horasReservadas}" />
+
+								</div>
+								<br>
+								<div>
+
+									<label for="estado_Reserva" class="form-label">Estado
+										de Reserva :</label> <input type="text" class="form-control"
+										id="estado_Reserva" placeholder="Estado de Reserva"
+										th:field="*{estado_Reserva}" />
+
+								</div>
+								<br>
+								<div >
+									<label for="cliente" class="form-label">Cliente
+										:</label>
+										<input type="text" class="form-control" id="cliente"
+											placeholder="Cliente" th:field="*{cliente}" />
+								</div>
+<br>
+								<div >
+									<label for="campo" class="form-label">Campo
+										:</label>
+									
+										<input type="text" class="form-control"  id="campo"
+											 th:field="*{campo.id_Campo}" />
+									
+								</div>
+								<br>
+	
+								<div align="center">
+									<button type="submit" class="btn btn-primary">RESERVAR</button>
+								</div>
+
+
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Mariel AQui tiene que ir el calendario aun falta poner algunas cosas  como imagen -->
+		</div>
+
+
+	</main>
+
+	<!-- ******************************FIN DEL CATALAGO DE CANCHAS****************************************-->
+
+
+	<script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/jquery-3.6.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+
+
+	<link rel="stylesheet"
+		href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="../js/mifunciones.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -11,7 +11,7 @@
 <link href="../../css/font-awesome.min.css" rel="stylesheet"
 	type="text/css" />
 <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
-<title>Actulizar Nueva Campo</title>
+<title> Nueva Campo</title>
 </head>
 <body>
 
@@ -20,7 +20,25 @@
 		
 
 	<section id="seccion1">
-			<p>Datos Nuevos Campo</p>
+		
+			
+			
+			
+			
+			<div class="container">
+				<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+					<h1 class="p-2 bg-success text-white">Datos Nuevos Campo</h1>
+				</div>
+			</div>
+			
+			<div class="container">
+			
+			<div class="card text-white bg-dark mb-3" style="max-width: 80rem; max-height: 80rem;">
+			<div class="card-header">
+                        <h3>Formulario</h3>
+                    </div>
+                    
+              <div class="card-body">     
 			<form th:action="@{/campos/guardar}"
 				th:object="${campo}" method="post">
 
@@ -73,6 +91,10 @@
 
 
 			</form>
+			</div>
+			</div>
+			</div>
+			
 	</section>
 
 

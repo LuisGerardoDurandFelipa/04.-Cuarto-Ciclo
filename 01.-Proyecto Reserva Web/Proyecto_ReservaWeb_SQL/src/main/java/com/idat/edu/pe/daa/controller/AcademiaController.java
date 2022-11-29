@@ -31,6 +31,20 @@ public class AcademiaController {
 	        return "/Bienvenida/bienvenida";
 	    }
 	
+	 @GetMapping("/academiaCliente")
+	    public String academiaCliente(Model model) {
+		 Academia academia = new Academia();
+	 		model.addAttribute("academia", academia);
+	 		return "/moduloAcademia/registroAcademia";
+	    }
+	 
+	 @RequestMapping(value = "/guardarinscrip" , method = RequestMethod.POST)
+	 	public String guardaInscripcion(@ModelAttribute("academia") Academia academia) {
+		 academiaServicioImp.crearAcademia(academia);
+	 		    return "redirect:/academias/academiaCliente";
+	 	}
+	 
+	 
 	 @RequestMapping("/listarTodo")
 		public String listarAcademias(Model model) {
 			List<Academia> listaAcademias = academiaServicioImp.buscarTodo();

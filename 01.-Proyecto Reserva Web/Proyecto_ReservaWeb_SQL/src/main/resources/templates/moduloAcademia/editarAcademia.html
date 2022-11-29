@@ -21,14 +21,28 @@
 
 
 	<section id="seccion1">
-		<p>Datos Nuevos de Academia</p>
+		
+			<div class="container">
+				<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+					<h1 class="p-2 bg-success text-white">DATOS NUEVAS ACADEMIA</h1>
+				</div>
+			</div>
+			
+			<div class="container">
+			
+			<div class="card text-white bg-dark mb-3" style="max-width: 80rem; max-height: 80rem;">
+			<div class="card-header">
+                        <h3>Formulario</h3>
+                    </div>
+                    
+              <div class="card-body">  
 		<form th:action="@{/academias/guardar}" th:object="${academia}"
 			method="post">
 
 			<div class="form-group row">
 				<label for="id_Registro" class="col-sm-2 col-form-label">ID
 					ACADEMIA :</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="id_Registro"
 						th:field="*{id_Registro}" readonly="readonly" />
 				</div>
@@ -36,7 +50,7 @@
 
 			<div class="form-group row">
 				<label for="nombre_tutor" class="col-sm-2 col-form-label">NOMBRE DE TUTOR :</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="nombre_tutor"
 						placeholder="NOMBRE DE TUTOR" th:field="*{nombre_tutor}" />
 				</div>
@@ -46,7 +60,7 @@
 
 			<div class="form-group row">
 				<label for="apellido_tutor" class="col-sm-2 col-form-label">APELLIDO DE TUTOR :</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="apellido_tutor"
 						placeholder="APELLIDO DE TUTOR" th:field="*{apellido_tutor}" />
 				</div>
@@ -55,7 +69,7 @@
 
 			<div class="form-group row">
 				<label for="dni_tutor" class="col-sm-2 col-form-label">DNI TUTOR :</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="dni_tutor"
 						placeholder="DNI TUTOR " th:field="*{dni_tutor}" />
 				</div>
@@ -65,7 +79,7 @@
 
 			<div class="form-group row">
 				<label for="telefono_tutor" class="col-sm-2 col-form-label">TELEFONO TUTOR :</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="telefono_tutor"
 						placeholder="TELEFONO TUTOR" th:field="*{telefono_tutor}" />
 				</div>
@@ -76,7 +90,7 @@
 			<div class="form-group row">
 				<label for="email_tutor" class="col-sm-2 col-form-label">EMAIL TUTOR
 					:</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="email_tutor"
 						placeholder="EMAIL TUTOR" th:field="*{email_tutor}" />
 				</div>
@@ -86,7 +100,7 @@
 			<div class="form-group row">
 				<label for="fechanac_estudiante" class="col-sm-2 col-form-label">FECHA NAC. ESTUDIANTE
 					:</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="fechanac_estudiante"
 						placeholder="FECHA NAC. ESTUDIANTE" th:field="*{fechanac_estudiante}" />
 				</div>
@@ -95,7 +109,7 @@
 			<div class="form-group row">
 				<label for="nombre_estudiante" class="col-sm-2 col-form-label">NOMBRE DE ESTUDIANTE
 					:</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="nombre_estudiante"
 						placeholder="NOMBRE DE ESTUDIANTE" th:field="*{nombre_estudiante}" />
 				</div>
@@ -105,7 +119,7 @@
 			<div class="form-group row">
 				<label for="apellido_estudiante" class="col-sm-2 col-form-label">APELLIDO DE ESTUDIANTE
 					:</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="apellido_estudiante"
 						placeholder="APELLIDO DE ESTUDIANTE" th:field="*{apellido_estudiante}" />
 				</div>
@@ -115,7 +129,7 @@
 			<div class="form-group row">
 				<label for="dni_estudiante" class="col-sm-2 col-form-label">DNI ESTUDIANTE
 					:</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="dni_estudiante"
 						placeholder="DNI ESTUDIANTE" th:field="*{dni_estudiante}" />
 				</div>
@@ -125,7 +139,7 @@
 			<div class="form-group row">
 				<label for="deporte" class="col-sm-2 col-form-label">DEPORTE
 					:</label>
-				<div class="col-sm-10">
+				<div class="col-sm-5">
 					<input type="text" class="form-control" id="deporte"
 						placeholder="DEPORTE" th:field="*{deporte}" />
 				</div>
@@ -145,5 +159,9 @@
 
 
 		</form>
+		
+			</div>
+				</div>
+					</div>
 	</section>
 </html>

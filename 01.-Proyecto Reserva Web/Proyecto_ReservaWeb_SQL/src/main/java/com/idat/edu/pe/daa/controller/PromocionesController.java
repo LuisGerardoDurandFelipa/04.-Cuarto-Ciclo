@@ -35,6 +35,31 @@ public class PromocionesController {
 	        return "/Bienvenida/bienvenida";
 	    }
 
+
+
+	  
+	  
+	  
+	  
+	  @GetMapping("/promoCliente")
+	    public String promciones_Cliente(Model model) {
+		  Promociones promociones = new Promociones();
+	 		model.addAttribute("promociones", promociones);
+	        return "/moduloPromociones/registroPromociones";
+	    }
+	  
+	  @RequestMapping("/listarProCliente")
+		public String listarPromocionesCliente(Model model) {
+			List<Promociones> listaPromociones = promocionesServicioImp.buscarTodo();
+			
+			System.out.println("LISTA DE PROMOCIONES : " + listaPromociones);
+			
+			model.addAttribute("listaPromociones", listaPromociones);
+			return "/moduloPromociones/vistasPromociones";
+		}
+	
+	
+	
 	
 
    
@@ -82,5 +107,8 @@ public class PromocionesController {
 		 return "redirect:/promociones/listarTodo";
 		
 	}
+	
+	
+	
 
 }

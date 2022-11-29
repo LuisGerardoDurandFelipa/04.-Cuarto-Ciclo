@@ -20,7 +20,22 @@
 		
 
 	<section id="seccion1">
-			<p>Datos de Nueva Promociones</p>
+		
+				<div class="container">
+				<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+					<h1 class="p-2 bg-success text-white">DATOS NUEVAS PROMOCIONES</h1>
+				</div>
+			</div>
+			
+			<div class="container">
+			
+			<div class="card text-white bg-dark mb-3" style="max-width: 80rem; max-height: 80rem;">
+			<div class="card-header">
+                        <h3>Formulario</h3>
+                    </div>
+                    
+              <div class="card-body">  
+			
 			<form th:action="@{/promociones/guardar}"
 				th:object="${promociones}" method="post">
 
@@ -67,8 +82,12 @@
 
 
 			</form>
+			
+				</div>
+					</div>
+						</div>
+						
 	</section>
-
-
+</body>
 	
 </html>
